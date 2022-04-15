@@ -1,0 +1,9 @@
+.all_products_wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.paginator {
+    text-align: center;
+}
