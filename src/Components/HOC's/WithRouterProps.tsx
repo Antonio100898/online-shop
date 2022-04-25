@@ -1,4 +1,3 @@
-import { Component, ComponentProps } from "react";
 import { useParams } from "react-router-dom";
 
 const WithRouterProps = (Component: any) => {
@@ -6,7 +5,7 @@ const WithRouterProps = (Component: any) => {
     const params = useParams();
     return <Component {...props} params={params} />;
   };
-  return ComponentWithRouterProps
+  return ComponentWithRouterProps;
 };
 
 export default WithRouterProps;

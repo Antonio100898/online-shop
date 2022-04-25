@@ -1,0 +1,85 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.checkout_form {
+  width: 700px;
+  background-color: #ffff;
+  margin-top: 50px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 150px 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  row-gap: 25px;
+}
+.radio {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.date {
+    grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.topic {
+  font-size: 25px;
+}
+.radio_wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    justify-content: space-between;
+    align-items: center;
+}
+.current_total {
+    font-size: 17px;
+}
+.hr {
+  width: 600px;
+}
+.grid_1 {
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+.grid_2 {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  width: 100%;
+  border: black 1px solid;
+  padding: 5px;
+  border-radius: 5px;
+}
+.btn_submit {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 6;
+}
+.error {
+  color: rgb(255, 105, 105);
+  padding-left: 10px;
+}
+.chekout_btn {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 5;
+}

@@ -1,4 +1,5 @@
 import axios from "axios"
+import { CartItem } from "../redux/cartReducer"
 
 const instance = axios.create({
     baseURL: 'https://fakestoreapi.com/'
@@ -42,5 +43,8 @@ export const request = {
     },
     getAllProducts() {
         return instance.get<AllProducts>('/products')
+    },
+    getSingleProduct(id: number) {
+        return instance.get<CartItem>('/products/' + id)
     }
 }

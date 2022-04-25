@@ -1,6 +1,5 @@
 import "antd/dist/antd.css";
-import { Layout, Menu } from "antd";
-import styles from "./App.module.css";
+import { Layout } from "antd";
 import AppRouter from "./Components/AppRouter/AppRouter";
 import store from "./redux/Store";
 import { BrowserRouter, NavLink } from "react-router-dom";
@@ -10,30 +9,30 @@ const { Header, Content, Footer, Sider } = Layout;
 
 function App() {
   
-  
-
   return (
     <div className="App">
       <Layout>
-        <Sider>
-          <img
-            className={styles.logo}
-            src="https://img.freepik.com/free-vector/online-shop-logo-design-template_145155-927.jpg"
-            alt="shop_logo"
-          />  
-          <MainMenu/>
+        <Sider style={{ paddingTop: "100px" }}>
+          <MainMenu />
         </Sider>
         <Layout>
           <Header
             className="site-layout-sub-header-background"
-            style={{ padding: 0 }}
-          />
+            style={{
+              padding: 0,
+              textAlign: "center",
+              color: "#ffff",
+              fontSize: "40px",
+            }}
+          >
+            <NavLink style={{color: "#ffff"}} to="/online-shop">ONLINE SHOP</NavLink>
+          </Header>
           <Content style={{ margin: "24px 16px 0" }}>
             <div
               className="site-layout-background"
               style={{ padding: 24, minHeight: 800 }}
             >
-              <AppRouter/>
+              <AppRouter />
             </div>
           </Content>
           <Footer style={{ textAlign: "center" }}>
@@ -48,11 +47,11 @@ function App() {
 const AppRouterContainer = () => {
   return (
     <BrowserRouter>
-    <Provider store={store}>
-    <App/>
-    </Provider>
+      <Provider store={store}>
+        <App />
+      </Provider>
     </BrowserRouter>
-  )
-}
+  );
+};
 
 export default AppRouterContainer;

@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react";
 import { AllProducts, Product } from "../../../Api/Api";
+import { CartItem } from "../../../redux/cartReducer";
 import ProductCard from "./ProductCard";
 import styles from "./Products.module.css";
 
-const ProductCards: React.FC<PropsType> = ({ products, category }) => {
-   
-    const [productsToShow, setProductsToShow] = useState([]) as Array<any> | Array<Product>
+const ProductCards: React.FC<PropsType> = ({
+  products,
+  category,
+  cartItems,
+}) => {
+  const [productsToShow, setProductsToShow] = useState([]) as
+    | Array<any>
+    | Array<Product>;
   const categoryHandler = () => {
     switch (category) {
       case "men":
@@ -35,19 +41,25 @@ const ProductCards: React.FC<PropsType> = ({ products, category }) => {
   useEffect(() => {
     categoryHandler();
   }, [category]);
-    
+
   return (
     <div>
       <div className={styles.all_products_wrapper}>
-        {productsToShow.length > 0 && productsToShow.map((product: Product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
+        {productsToShow.length > 0 &&
+          productsToShow.map((product: Product) => (
+            <ProductCard
+              cartItems={cartItems}
+              key={product.id}
+              product={product}
+            />
+          ))}
       </div>
     </div>
   );
 };
 type PropsType = {
   products: AllProducts;
-  category: string
+  category: string;
+  cartItems: Array<CartItem>;
 };
 export default ProductCards;

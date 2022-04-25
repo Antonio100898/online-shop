@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { connect } from "react-redux";
 import { compose } from "redux";
-import { AllProducts, Product } from "../../../Api/Api";
+import { AllProducts } from "../../../Api/Api";
+import { CartItem } from "../../../redux/cartReducer";
 import { fetchAllProducts, setCategory } from "../../../redux/productsReducer";
 import { State } from "../../../redux/Store";
 import WithRouterProps from "../../HOC's/WithRouterProps";
@@ -14,20 +15,28 @@ const ProductsMain: React.FC<PropsType> = ({
   isFetching,
   params,
   category,
-  setCategory
+  setCategory,
+  cartItems,
 }) => {
-  
   useEffect(() => {
     fetchAllProducts();
-    setCategory(params.category)
+    setCategory(params.category);
   }, []);
-  
+
   useEffect(() => {
     setCategory(params.category);
-  }, [params])
+  }, [params]);
   return (
     <div>
-      {isFetching ? <Preloader /> : <ProductCards category={category} products={products} />}
+      {isFetching ? (
+        <Preloader />
+      ) : (
+        <ProductCards
+          cartItems={cartItems}
+          category={category}
+          products={products}
+        />
+      )}
     </div>
   );
 };
@@ -45,11 +54,13 @@ type MapStateToProps = {
   products: AllProducts;
   isFetching: boolean;
   category: string;
+  cartItems: Array<CartItem>;
 };
 const MapStateToProps = (state: State) => ({
   products: state.products.allProducts,
   isFetching: state.products.isFetching,
   category: state.products.category,
+  cartItems: state.cart.items,
 });
 
 export default compose(
