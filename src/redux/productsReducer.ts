@@ -4,7 +4,7 @@ import { Dispatch } from "redux"
 import { CartItem } from "./cartReducer";
 
 
-interface InitialState {
+export interface InitialState {
     allProducts: AllProducts | Array<any>
     isFetching: boolean
     category: string
@@ -51,7 +51,6 @@ export const fetchProduct = (id: number) => async (dispatch: Dispatch) => {
     dispatch(setIsFetching(false))
 }
 
-const { setProduct, getAllProducts, setIsFetching } = productsSlice.actions
-export const { setCategory } = productsSlice.actions
+export const { setProduct, getAllProducts, setIsFetching, setCategory } = productsSlice.actions
 
 export default productsSlice.reducer

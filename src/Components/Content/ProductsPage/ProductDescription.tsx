@@ -1,13 +1,11 @@
 import styles from "./Products.module.css";
 import { Descriptions, Image, Button } from "antd";
 import { CartItem } from "../../../redux/cartReducer";
-import Preloader from "../../Preloader/Preloader";
 
 const ProductDescription: React.FC<PropsType> = ({
   product,
   addCartItems,
   cartItems,
-  isFetching,
 }) => {
   const { price, title, description, category, image, rating, id } = product;
   const { rate } = rating;
@@ -15,11 +13,15 @@ const ProductDescription: React.FC<PropsType> = ({
   const onAddToCartClick = () => {
     addCartItems(product);
   };
+
+  
   return (
     <div className={styles.description_wrapper}>
       <div className={styles.description}>
         <div>
-          <div className={styles.title}>{title}</div>{" "}
+          <div role="title" className={styles.title}>
+            {title}
+          </div>
           <div>
             <Image width={"300px"} src={image} />
           </div>
@@ -32,7 +34,6 @@ const ProductDescription: React.FC<PropsType> = ({
               >
                 Add to cart
               </Button>
-              {isFetching && <Preloader />}
               {cartItems.some((item) => item.id === id) && (
                 <span className={styles.added_alert}>Added to cart</span>
               )}
@@ -75,8 +76,7 @@ const ProductDescription: React.FC<PropsType> = ({
 
 export default ProductDescription;
 
-type PropsType = {
-  isFetching: boolean;
+export type PropsType = {
   product: CartItem;
   addCartItems: (item: CartItem) => void;
   cartItems: Array<CartItem>;

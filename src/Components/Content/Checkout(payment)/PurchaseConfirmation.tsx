@@ -23,7 +23,7 @@ const PurchaseConfirmation: React.FC<PropsType> = ({
 
   const newNumber = (number: string) => {
     const length = number.length;
-    let numberArray = [] as Array<string>;
+    let numberArray = [] as string[];
     for (let i = 0; i < length; i++) {
       numberArray.push(number[i]);
     }

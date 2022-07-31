@@ -19,18 +19,15 @@ const ProductDescriptionContainer: React.FC<PropsType> = ({
   useEffect(() => {
     fetchProduct(+params.id);
   }, [params.id]);
+
+  if(isFetching || product.rating === undefined) return <Preloader />
   return (
     <div>
-      {isFetching || product.rating === undefined ? (
-        <Preloader />
-      ) : (
-        <ProductDescription
-          isFetching={isFetching}
-          cartItems={cartItems}
-          addCartItems={addCartItems}
-          product={product}
-        />
-      )}{" "}
+      <ProductDescription
+        cartItems={cartItems}
+        addCartItems={addCartItems}
+        product={product}
+      />
     </div>
   );
 };

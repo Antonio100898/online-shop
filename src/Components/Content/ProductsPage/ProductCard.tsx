@@ -6,7 +6,7 @@ import styles from "./Products.module.css";
 
 const { Meta } = Card;
 
-const ProductCard: React.FC<PropsType> = ({ product, cartItems }) => {
+const ProductCard: React.FC<PropsType> = ({ product }) => {
   const { id, image, title, price, category } = product;
   return (
     <div>
@@ -15,7 +15,7 @@ const ProductCard: React.FC<PropsType> = ({ product, cartItems }) => {
           extra={<div className={styles.price}>${price}</div>}
           size="small"
           hoverable
-          style={{ width: 240, margin: 50 }}
+          style={{ width: 300, margin: 50, height: 600, display: "flex", flexDirection: "column", justifyContent: "space-between", padding: 10 }}
           cover={<img alt={title + "_img"} src={image} />}
         >
           <Meta title={title} description={category} />

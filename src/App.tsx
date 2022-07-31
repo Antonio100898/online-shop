@@ -8,7 +8,6 @@ import MainMenu from "./Components/Menu/MainMenu";
 const { Header, Content, Footer, Sider } = Layout;
 
 function App() {
-  
   return (
     <div className="App">
       <Layout>
@@ -17,7 +16,6 @@ function App() {
         </Sider>
         <Layout>
           <Header
-            className="site-layout-sub-header-background"
             style={{
               padding: 0,
               textAlign: "center",
@@ -25,15 +23,12 @@ function App() {
               fontSize: "40px",
             }}
           >
-            <NavLink style={{color: "#ffff"}} to="/online-shop">ONLINE SHOP</NavLink>
+            <NavLink style={{ color: "#ffff" }} to="/online-shop">
+              ONLINE SHOP
+            </NavLink>
           </Header>
-          <Content style={{ margin: "24px 16px 0" }}>
-            <div
-              className="site-layout-background"
-              style={{ padding: 24, minHeight: 800 }}
-            >
+          <Content style={{ padding: 24, minHeight: 800}}>
               <AppRouter />
-            </div>
           </Content>
           <Footer style={{ textAlign: "center" }}>
             Anton's online shop project.

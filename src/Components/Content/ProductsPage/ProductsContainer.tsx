@@ -26,17 +26,15 @@ const ProductsMain: React.FC<PropsType> = ({
   useEffect(() => {
     setCategory(params.category);
   }, [params]);
+  
+  if (isFetching) return <Preloader />;
   return (
     <div>
-      {isFetching ? (
-        <Preloader />
-      ) : (
-        <ProductCards
-          cartItems={cartItems}
-          category={category}
-          products={products}
-        />
-      )}
+      <ProductCards
+        cartItems={cartItems}
+        category={category}
+        products={products}
+      />
     </div>
   );
 };

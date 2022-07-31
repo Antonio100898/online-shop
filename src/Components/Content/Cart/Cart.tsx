@@ -23,7 +23,7 @@ const Cart: React.FC<PropsType> = ({ items, removeCartItem, total }) => {
         </div>
         <div className={styles.cart_total}>
           <div className={styles.cart_header}>Total</div>
-          <div className={styles.total + " " + styles.price}>{total} $</div>
+          <div className={styles.total + " " + styles.price}>{Math.ceil(total)} $</div>
           <div>
             <NavLink to={"/checkout"}>
               <u>Proceed to checkout</u>

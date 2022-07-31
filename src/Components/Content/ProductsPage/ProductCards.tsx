@@ -12,6 +12,7 @@ const ProductCards: React.FC<PropsType> = ({
   const [productsToShow, setProductsToShow] = useState([]) as
     | Array<any>
     | Array<Product>;
+
   const categoryHandler = () => {
     switch (category) {
       case "men":
@@ -43,17 +44,15 @@ const ProductCards: React.FC<PropsType> = ({
   }, [category]);
 
   return (
-    <div>
-      <div className={styles.all_products_wrapper}>
-        {productsToShow.length > 0 &&
-          productsToShow.map((product: Product) => (
-            <ProductCard
-              cartItems={cartItems}
-              key={product.id}
-              product={product}
-            />
-          ))}
-      </div>
+    <div className={styles.all_products_wrapper}>
+      {productsToShow.length > 0 &&
+        productsToShow.map((product: Product) => (
+          <ProductCard
+            cartItems={cartItems}
+            key={product.id}
+            product={product}
+          />
+        ))}
     </div>
   );
 };

@@ -7,7 +7,6 @@ import Homepage from "../Homepage/Homepage"
 
 const AppRouter: React.FC = () => {
     return (
-        <div>
               <Routes>
                     <Route path="/:category" element={<ProductsContainer/>}/>
                     <Route path="/product/:id" element={<ProductDescriptionContainer/>}/>
@@ -15,7 +14,6 @@ const AppRouter: React.FC = () => {
                     <Route path="/checkout" element={<PaymentProcess/>}/>
                     <Route path="/online-shop" element={<Homepage/>}/>
               </Routes>
-        </div>
     )
 }
 
