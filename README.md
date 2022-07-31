@@ -1,46 +1,15 @@
-# Getting Started with Create React App
+E-shop application. User able to browse all products in the store or specify category he wants to see.
+Also user can add a product to the cart, delete from the cart, checkout, and see purchase details.
+Application contains few checkout forms with different buyer details implemented as a different steps.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Technologies: Typescript, React, Redux, Ant Design, React router.
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Project is deployed on the gh-pages: https://antonio100898.github.io/online-shop/
+![Eshop1](https://user-images.githubusercontent.com/99435115/182034820-6e560d5a-09af-4208-bc01-494c7fe52ebb.PNG)
+![Eshop2](https://user-images.githubusercontent.com/99435115/182034821-f2b91cd9-5964-4387-930b-311b687e4878.PNG)
+![Eshop3](https://user-images.githubusercontent.com/99435115/182034823-d4b0c95f-c7c2-47f9-b1c3-bc5d7c5c5062.PNG)
+![Eshop4](https://user-images.githubusercontent.com/99435115/182034824-0a9d4679-54d2-45df-a82a-3869e9d3d608.PNG)
+![Eshop5](https://user-images.githubusercontent.com/99435115/182034825-02531a40-f8f2-43bf-9310-5a0dd4a8c467.PNG)
+![Eshop6](https://user-images.githubusercontent.com/99435115/182034826-281c3140-784a-4eb9-8202-90ea49f241f3.PNG)
+![Eshop7](https://user-images.githubusercontent.com/99435115/182034828-bed42bce-925b-4306-b24c-494d1b2ff6b8.PNG)
+![Eshop8](https://user-images.githubusercontent.com/99435115/182034829-09136385-4f84-44a0-8670-e691c270e4c3.PNG)
